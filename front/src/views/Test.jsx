@@ -1,5 +1,5 @@
 import React from 'react';
-import './Test.css';
+import './Test.scss';
 
 class Test extends React.Component {
     constructor(props) {
@@ -20,12 +20,14 @@ class Test extends React.Component {
 
     render() {
         return (
-            <button
-                onClick={this.handleClick}
-                className="square"
-            >
-                {this.state.label}
-            </button>
+            <div class="button-test">
+                <button
+                    onClick={this.handleClick}
+                    className="square"
+                >
+                    {this.state.label}
+                </button>
+            </div>
         );
     }
 }
