@@ -4,6 +4,7 @@ import * as actions from './store/actions';
 
 const token = localStorage.getItem('access_token');
 axios.defaults.headers.common.Authorization = `Bearer ${token}`;
+axios.defaults.baseURL = (process.env.APP_API_URL || 'http://laravel.local')   + '/api/'; //TODO:env
 
 axios.interceptors.response.use(
   (response) => response,
