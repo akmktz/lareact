@@ -10,6 +10,10 @@ class User extends Authenticatable
 {
     use HasApiTokens, Notifiable;
 
+    const TABLE_NAME = 'users';
+
+    protected $table = self::TABLE_NAME;
+
     /**
      * The attributes that are mass assignable.
      *

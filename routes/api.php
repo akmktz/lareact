@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['namespace' => 'API', 'middleware' => ['auth:api']], function () {
     Route::get('user', 'AuthController@user')->name('user');
+    Route::resource('groups', 'CatalogGroupsController');
 });
 
 Route::group(['namespace' => 'API', 'prefix' => 'auth'], function () {
